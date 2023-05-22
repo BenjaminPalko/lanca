@@ -13,8 +13,8 @@ const NavBar = function () {
                         <a className="block md:flex gap-4 hover:text-red-500 hover:cursor-pointer"
                            onClick={() => navigate('/')}>
                             <span className="sr-only">Home</span>
-                            <img src={brand} alt={'Lancer'} width={'36px'} height={'36px'}/>
-                            <h1 className={'text-3xl font-extralight antialiased'}>Lancer</h1>
+                            <img src={brand} alt={'Lanca'} width={'36px'} height={'36px'}/>
+                            <h1 className={'text-3xl font-extralight antialiased'}>Lanca</h1>
                         </a>
                     </div>
 
