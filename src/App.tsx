@@ -1,5 +1,6 @@
-import {lazy, ReactElement, Suspense} from "react";
+import {lazy} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Loader from "./components/Loader.tsx";
 import NavBar from "./components/NavBar.tsx";
 
 const Home = lazy(() => import('./pages/Home.tsx'));
@@ -7,21 +8,6 @@ const About = lazy(() => import('./pages/About.tsx'));
 const Team = lazy(() => import('./pages/Team.tsx'));
 const Services = lazy(() => import('./pages/Services.tsx'));
 
-const Loader = function ({element}: { element: ReactElement }) {
-
-    const Fallback = function () {
-
-        return (
-            <></>
-        )
-    }
-
-    return (
-        <Suspense fallback={<Fallback/>}>
-            {element}
-        </Suspense>
-    )
-}
 
 function App() {
 
