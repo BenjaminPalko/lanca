@@ -11,7 +11,7 @@ const Team = function () {
             <h1 className={'w-full text-center text-4xl'}>Meet the Team</h1>
             {
                 people.data?.people.map(person => (
-                    <PersonCard person={person}/>
+                    <PersonCard key={person.id} person={person}/>
                 ))
             }
         </div>
