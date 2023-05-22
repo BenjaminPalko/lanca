@@ -10,12 +10,12 @@ const NavBar = function () {
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex-1 md:flex md:items-center md:gap-4">
-                        <a className="block hover:cursor-pointer" onClick={() => navigate('/')}>
+                        <a className="block md:flex gap-4 hover:text-red-500 hover:cursor-pointer"
+                           onClick={() => navigate('/')}>
                             <span className="sr-only">Home</span>
                             <img src={brand} alt={'Lancer'} width={'36px'} height={'36px'}/>
-
+                            <h1 className={'text-3xl font-extralight antialiased'}>Lancer</h1>
                         </a>
-                        <h1 className={'text-3xl font-extralight antialiased'}>Lancer</h1>
                     </div>
 
                     <div className="md:flex md:items-center md:gap-12">
