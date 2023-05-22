@@ -21,6 +21,7 @@ const PeopleAtom = atomWithQuery({
                 about
                 skills {
                     ... on Skill {
+                        id
                         rank
                         skillName
                     }

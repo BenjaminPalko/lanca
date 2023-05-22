@@ -29,11 +29,15 @@ const PersonCard = function ({person}: PersonCardProps) {
                     }
                 </p>
 
-                <div className={'mt-2 flex flex-wrap gap-2'}>
-                    {person.skills.map(skill => (
-                        <Badge value={skill.skillName} color={'red'}/>
-                    ))}
-                </div>
+                <ul className={'mt-2 flex flex-wrap gap-2'}>
+                    {
+                        person.skills.map(skill => (
+                            <li key={skill.id}>
+                                <Badge value={skill.skillName} color={'red'}/>
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
         </article>
     )
