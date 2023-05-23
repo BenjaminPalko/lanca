@@ -6,13 +6,14 @@ import PageNotFound from "../PageNotFound.tsx";
 
 const Person = function () {
 
-    const {id} = useParams();
+    const {slug} = useParams();
 
     const [result,] = useQuery({
         query: gql<{ person: Person }>`
-            query PersonById($id: ID) {
-                person(where: {id: $id}) {
+            query PersonById($slug: String) {
+                person(where: {slug: $slug}) {
                     id
+                    slug
                     name
                     about
                     skills {
@@ -32,7 +33,7 @@ const Person = function () {
             }
         `,
         variables: {
-            id: id
+            slug: slug
         }
     });
 

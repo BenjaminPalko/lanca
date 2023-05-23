@@ -11,7 +11,7 @@ const PersonCard = function ({person}: PersonCardProps) {
     const navigate = useNavigate();
 
     const handleClick = function () {
-        navigate(`/team/${person.id}`)
+        navigate(`/team/${person.slug}`)
     }
 
     return (

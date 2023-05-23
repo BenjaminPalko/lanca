@@ -55,7 +55,7 @@ function App() {
                             <Route path={'/services'} element={<Loader element={<Services/>}/>}/>
                             <Route path={'/services/:slug'} element={<Loader element={<Service/>}/>}/>
                             <Route path={'/team'} element={<Loader element={<Team/>}/>}/>
-                            <Route path={'/team/:id'} element={<Loader element={<Person/>}/>}/>
+                            <Route path={'/team/:slug'} element={<Loader element={<Person/>}/>}/>
                             <Route path={'*'} element={<Loader element={<PageNotFound/>}/>}/>
                         </Routes>
                     </div>

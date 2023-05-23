@@ -5,6 +5,7 @@ type Rank = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
 export interface Person {
     id: string;
+    slug: string;
     name: string;
     about: string;
     skills: { rank: Rank, skill: { id: string, name: string } }[];
@@ -19,6 +20,7 @@ const PeopleAtom = atomWithQuery({
         query People {
             people {
                 id
+                slug
                 name
                 about
                 skills {
