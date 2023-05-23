@@ -43,9 +43,9 @@ const Service = function () {
     }
 
     return (
-        <>
+        <div className={'h-full w-1/2 mt-8 mx-auto bg-white rounded'}>
             <h1>{service.name}</h1>
-        </>
+        </div>
     )
 }
 
