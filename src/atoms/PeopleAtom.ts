@@ -20,10 +20,12 @@ const PeopleAtom = atomWithQuery({
                 name
                 about
                 skills {
-                    ... on Skill {
-                        id
+                    ... on PersonSkill {
                         rank
-                        skillName
+                        skill {
+                            id
+                            name
+                        }
                     }
                 }
                 photo {
