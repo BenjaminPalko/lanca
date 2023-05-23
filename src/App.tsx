@@ -6,6 +6,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {cacheExchange, Client, fetchExchange, Provider as URQLProvider} from "urql";
 import Loader from "./components/Loader.tsx";
 import NavBar from "./components/NavBar.tsx";
+import Service from "./pages/Services/Service.tsx";
 import Person from "./pages/Team/Person.tsx";
 
 const Home = lazy(() => import('./pages/Home.tsx'));
@@ -52,6 +53,7 @@ function App() {
                             <Route path={'/'} element={<Loader element={<Home/>}/>}/>
                             <Route path={'/about'} element={<Loader element={<About/>}/>}/>
                             <Route path={'/services'} element={<Loader element={<Services/>}/>}/>
+                            <Route path={'/services/:slug'} element={<Loader element={<Service/>}/>}/>
                             <Route path={'/team'} element={<Loader element={<Team/>}/>}/>
                             <Route path={'/team/:id'} element={<Loader element={<Person/>}/>}/>
                             <Route path={'*'} element={<Loader element={<PageNotFound/>}/>}/>

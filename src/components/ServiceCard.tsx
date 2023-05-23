@@ -1,3 +1,4 @@
+import {useNavigate} from "react-router-dom";
 import {type Service} from "../atoms/ServicesAtom.ts";
 
 interface ServiceCardProps {
@@ -6,10 +7,16 @@ interface ServiceCardProps {
 
 const ServiceCard = function ({service}: ServiceCardProps) {
 
+    const navigate = useNavigate();
+
+    const handleClick = function () {
+        navigate(`/services/${service.slug}`)
+    }
+
     return (
         <a
             className="block rounded-xl border border-red-500/10 p-8 shadow-xl transition hover:border-gray-300 hover:shadow-red-500/10"
-            href="/services/digital-campaigns"
+            onClick={handleClick}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"

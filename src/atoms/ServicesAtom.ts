@@ -3,6 +3,7 @@ import {gql} from "urql";
 
 export interface Service {
     id: string;
+    slug: string;
     name: string;
     details: string;
     description: string;
@@ -21,6 +22,7 @@ const ServicesAtom = atomWithQuery({
         query Services {
             services {
                 id
+                slug
                 name
                 details
                 description
