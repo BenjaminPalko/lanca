@@ -1,3 +1,4 @@
+import {useNavigate} from "react-router-dom";
 import {type Person} from "../atoms/PeopleAtom.ts";
 import Badge from "./Badge.tsx";
 
@@ -7,8 +8,15 @@ interface PersonCardProps {
 
 const PersonCard = function ({person}: PersonCardProps) {
 
+    const navigate = useNavigate();
+
+    const handleClick = function () {
+        navigate(`/team/${person.id}`)
+    }
+
     return (
-        <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg hover:cursor-pointer max-w-sm">
+        <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg hover:cursor-pointer max-w-sm"
+                 onClick={handleClick}>
             <img
                 alt="Office"
                 src={person.photo.url}
@@ -32,8 +40,8 @@ const PersonCard = function ({person}: PersonCardProps) {
                 <ul className={'mt-2 flex flex-wrap gap-2'}>
                     {
                         person.skills.map(skill => (
-                            <li key={skill.id}>
-                                <Badge value={skill.skillName} color={'red'}/>
+                            <li key={skill.skill.id}>
+                                <Badge value={skill.skill.name} color={'red'}/>
                             </li>
                         ))
                     }
