@@ -11,11 +11,11 @@ const NavBar = function () {
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex-1 md:flex md:items-center md:gap-4">
-                        <a className="block md:flex items-end gap-2 hover:text-red-500 hover:cursor-pointer"
+                        <a className="block md:flex items-center gap-2 hover:text-red-500 hover:cursor-pointer"
                            onClick={() => navigate('/')}>
                             <span className="sr-only">Home</span>
                             <img src={brand} alt={'Lanca'} width={'32px'} height={'32px'}/>
-                            <h1 className={'text-2xl font-extralight antialiased -mb-1'}>Lanca</h1>
+                            <h1 className={'text-2xl font-extralight antialiased -mb-1 uppercase'}>Lanca</h1>
                         </a>
                     </div>
 
