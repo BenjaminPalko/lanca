@@ -15,7 +15,7 @@ const ServiceCard = function ({service}: ServiceCardProps) {
 
     return (
         <a
-            className="block rounded-xl border border-red-500/10 p-8 shadow-xl transition hover:border-gray-300 hover:shadow-red-500/10"
+            className="block rounded-xl border border-red-500/10 p-8 shadow-xl transition hover:cursor-pointer hover:border-gray-300 hover:shadow-red-500/10"
             onClick={handleClick}
         >
             <svg
