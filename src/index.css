@@ -7,7 +7,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  @apply bg-gray-100;
+  @apply bg-gradient-to-b from-gray-50 to-red-50;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
