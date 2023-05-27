@@ -11,7 +11,7 @@ const Badge = function ({value, color}: BadgeProps) {
     const _color = useMemo(() => {
         switch (color) {
             case "red": {
-                return 'bg-red-100 text-red-600';
+                return 'bg-white text-red-600';
             }
             default: {
                 return ''
@@ -21,7 +21,7 @@ const Badge = function ({value, color}: BadgeProps) {
 
     return (
         <span
-            className={twMerge("whitespace-nowrap rounded-full px-3 py-1 text-sm bg-purple-100 text-purple-700 antialiased", _color)}>
+            className={twMerge("whitespace-nowrap rounded-full px-2.5 py-0.5 text-sm bg-purple-100 text-purple-700 antialiased", _color)}>
             {value}
         </span>
     )
