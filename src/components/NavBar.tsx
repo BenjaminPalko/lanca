@@ -49,6 +49,15 @@ const NavBar = function () {
                                     </a>
                                 </li>
 
+                                <li>
+                                    <a
+                                        className={`block h-16 leading-[4rem] text-gray-500 transition border-b-4 ${location.pathname === '/contact' || 'border-transparent'} hover:border-current hover:text-red-600 hover:cursor-pointer`}
+                                        onClick={() => navigate('/contact')}
+                                    >
+                                        Contact
+                                    </a>
+                                </li>
+
                             </ul>
                         </nav>
                     </div>

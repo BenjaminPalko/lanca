@@ -1,6 +1,6 @@
 const About = function () {
     return (
-        <div className={'w-1/2 mx-auto mt-8 bg-white rounded'}>
+        <div className={'mx-auto max-w-screen-xl mt-8 bg-white rounded'}>
             <section>
                 <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
                     <div className="max-w-3xl">

@@ -1,13 +1,15 @@
 import {useAtom} from "jotai";
+import {useNavigate} from "react-router-dom";
 import ServicesAtom from "../atoms/ServicesAtom.ts";
 import ServiceCard from "../components/ServiceCard.tsx";
 
 const Services = function () {
 
     const [services,] = useAtom(ServicesAtom);
+    const navigate = useNavigate();
 
     return (
-        <div className={'h-full w-1/2 mt-8 mx-auto'}>
+        <div className={'h-full mx-auto max-w-screen-xl mt-8'}>
             <section className="bg-white rounded">
                 <div
                     className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8"
@@ -34,8 +36,8 @@ const Services = function () {
 
                     <div className="mt-12 text-center">
                         <a
-                            href="#"
-                            className="inline-block rounded bg-red-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-red-500 focus:outline-none focus:ring focus:ring-yellow-400"
+                            onClick={() => navigate('/contact')}
+                            className="inline-block rounded bg-red-600 px-12 py-3 text-sm font-medium text-white transition hover:cursor-pointer hover:bg-red-500 focus:outline-none focus:ring focus:ring-yellow-400"
                         >
                             Get Started Today
                         </a>
