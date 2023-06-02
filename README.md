@@ -2,6 +2,8 @@
 
 Small mock project for frontend development practice.
 
+https://lanca.netlify.app/
+
 # Stack
 
 - [React](https://nextjs.org/) (frontend framework)
